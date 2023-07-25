@@ -52,6 +52,22 @@ files = [
 Django = ">=3.2"
 
 [[package]]
+name = "django-localflavor"
+version = "4.0"
+description = "Country-specific Django helpers"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-localflavor-4.0.tar.gz", hash = "sha256:11859e522dba74aa6dde5a659242b1fbc5efb4dea08e9b77315402bdeca5194e"},
+    {file = "django_localflavor-4.0-py3-none-any.whl", hash = "sha256:7a5b1df03ca8e10df9d1b3c2e4314e43383067868183cdf41ab4e7a973694a8b"},
+]
+
+[package.dependencies]
+django = ">=3.2"
+python-stdnum = ">=1.6"
+
+[[package]]
 name = "django-ninja"
 version = "0.22.2"
 description = "Django Ninja - Fast Django REST framework"
@@ -138,6 +154,23 @@ files = [
 ]
 
 [[package]]
+name = "python-stdnum"
+version = "1.18"
+description = "Python module to handle standardized numbers and codes"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "python-stdnum-1.18.tar.gz", hash = "sha256:bcc763d9c49ae23da5d2b7a686d5fd1deec9d9051341160a10d1ac723a26bec0"},
+    {file = "python_stdnum-1.18-py2.py3-none-any.whl", hash = "sha256:d7f2a3c7ef4635c957b9cbdd9b1993d1f6ee3a2959f03e172c45440d99f296eb"},
+]
+
+[package.extras]
+soap = ["zeep"]
+soap-alt = ["suds"]
+soap-fallback = ["PySimpleSOAP"]
+
+[[package]]
 name = "sqlparse"
 version = "0.4.4"
 description = "A non-validating SQL parser."
@@ -181,4 +214,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "c8a36e9d6312aae3ccf41ef0aab6adfcef625fa164e364667a09fa48463f4ac9"
+content-hash = "0df20d76a97f968bcedfaceb761b936431d5aaa2700af47ad3a653b3bbd5d4ae"
