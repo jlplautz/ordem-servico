@@ -3,4 +3,26 @@
 
 {% block content %}
     <h1>Ordens de Serviço</h1>
+
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>Nº</th>
+                <th>Cliente</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for object in object_list %}
+               <tr>
+                <td>{{object.id }}</td>
+                {% comment %} colocar o cliente como link para visuaizar os itens{% endcomment %}
+                <td>
+                    <a href="{% url 'servico:ordem_servico_detail' object.pk %}">{{object.cliente}}</td>
+                {% comment %} para trazer o fiel name usar get {% endcomment %}
+                <td>{{object.get_situacao_display}}</td>
+               </tr> 
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock content%}
